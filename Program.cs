@@ -23,14 +23,14 @@ namespace MyFirstProject
             Console.Write("Сколько у вас евро? ");
             double balanceEur = Convert.ToSingle(Console.ReadLine());            
 
-            double RubToUsdRate = 31.40;
-            double RubToEurRate = 45.40;
+            double rubToUsdRate = 31.40;
+            double rubToEurRate = 45.40;
 
-            double UsdToEurRate = 1;
-            double UsdToRubRate = 0.016298;
+            double usdToEurRate = 1;
+            double usdToRubRate = 0.016298;
 
-            double EurToUsdRate = 1;
-            double EurToRubRate = 0.016241;
+            double eurToUsdRate = 1;
+            double eurToRubRate = 0.016241;
 
             bool isOpen = true;
             int amountToChange = 0;
@@ -61,7 +61,7 @@ namespace MyFirstProject
                         if (amountToChange <= balanceRub)
                         {
                             balanceRub -= amountToChange;
-                            balanceUsd += amountToChange / RubToUsdRate;
+                            balanceUsd += amountToChange / rubToUsdRate;
                         }
                         else
                         {
@@ -75,7 +75,7 @@ namespace MyFirstProject
                         if (amountToChange <= balanceRub)
                         {
                             balanceRub -= amountToChange;
-                            balanceEur += amountToChange / RubToEurRate;
+                            balanceEur += amountToChange / rubToEurRate;
                         }
                         else
                         {
@@ -89,7 +89,7 @@ namespace MyFirstProject
                         if (amountToChange <= balanceRub)
                         {
                             balanceUsd -= amountToChange;
-                            balanceRub += amountToChange / UsdToRubRate;
+                            balanceRub += amountToChange / usdToRubRate;
                         }
                         else
                         {
@@ -103,7 +103,7 @@ namespace MyFirstProject
                         if (amountToChange <= balanceRub)
                         {
                             balanceUsd -= amountToChange;
-                            balanceEur += amountToChange / UsdToEurRate;
+                            balanceEur += amountToChange / usdToEurRate;
                         }
                         else
                         {
@@ -117,7 +117,7 @@ namespace MyFirstProject
                         if (amountToChange <= balanceRub)
                         {
                             balanceEur -= amountToChange;
-                            balanceRub += amountToChange / EurToRubRate;
+                            balanceRub += amountToChange / eurToRubRate;
                         }
                         else
                         {
@@ -131,7 +131,7 @@ namespace MyFirstProject
                         if (amountToChange <= balanceRub)
                         {
                             balanceEur -= amountToChange;
-                            balanceUsd += amountToChange / EurToUsdRate;
+                            balanceUsd += amountToChange / eurToUsdRate;
                         }
                         else
                         {
